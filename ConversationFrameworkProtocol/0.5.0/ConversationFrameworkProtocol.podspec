@@ -10,9 +10,13 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '8.0'
   s.requires_arc = true
   s.source_files = 'swift/protocol/**/*.swift'
-  #s.dependency 'SwiftGRPC', '~> 0.11.0'
+  s.dependency 'SwiftGRPC', '~> 0.11.0'
   #s.dependency 'SwiftProtobuf', '~> 1.7.0'
   #s.dependency 'gRPC-Swift', '~> 1.0.0'
-  s.ios.dependency 'SwiftGRPC', '~> 0.11.0'
+  #s.ios.dependency 'SwiftGRPC', '~> 0.11.0'
+  #s.weak_framework='SwiftGRPC', '~> 0.11.0'
   
+  # to try
+  s.static_framework = true
+  s.weak_frameworks = 'SwiftGRPC'
 end
