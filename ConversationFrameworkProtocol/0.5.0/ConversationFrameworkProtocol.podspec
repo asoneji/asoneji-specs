@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
   s.author           = { 'aarontriplett' => 'aaron_triplett@intuit.com' }
   s.source           = { :git => 'https://github.intuit.com/Conversation-Framework/conversation-framework-protocol-v2.git', :tag => s.version.to_s }
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '13.0'
   s.requires_arc = true
   s.source_files = 'swift/protocol/**/*.swift'
   s.dependency 'SwiftGRPC', '~> 0.11.0'
@@ -18,5 +18,5 @@ Pod::Spec.new do |s|
   
   # to try
   s.static_framework = true
-  s.weak_frameworks = 'SwiftGRPC'
+  #s.weak_frameworks = 'SwiftGRPC', 'SwiftProtobuf'
 end
